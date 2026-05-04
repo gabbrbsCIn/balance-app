@@ -21,10 +21,32 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.gab_barbss.balanceapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O app precisa acessar suas fotos para importar o caderno.",
+          "cameraPermission": "O app precisa da câmera para fotografar o caderno."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a5202cd1-fae0-4175-8f80-a984a055a320"
+      }
     }
   }
 }
